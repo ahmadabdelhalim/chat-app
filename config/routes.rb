@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root controller: :conversations, action: :index
+  
+  resources :messages
+  resources :conversations
+
+  post '/webhooks/telegram_vbc43efbf1343a012454dvd4bfab34l1' => 'webhooks#callback'
 end

@@ -1,0 +1,11 @@
+<% if @conversations.present? %>
+  <nav class="nav flex-column">
+    <% @conversations.each do |conversation| %>
+      <%= link_to "conversation number #{conversation.id}", conversation_path(conversation), class: 'nav-link conversation-nav-link' %>
+    <% end %>
+  </nav>
+<% else %>
+  <div class="text-muted">
+    The are no conversations
+  </div>
+<% end %>
