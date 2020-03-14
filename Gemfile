@@ -13,8 +13,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'simple_form'
 gem 'telegram-bot-ruby'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'factory_bot_rails'
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
@@ -32,6 +34,7 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :conversation do
-    name { "MyString" }
+    telegram_chat_id { Faker::Number.unique.number(digits: 10) }
   end
 end

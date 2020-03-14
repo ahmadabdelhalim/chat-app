@@ -5,7 +5,7 @@ class TelegramBotService
   def initialize(message)
     @message = message.body
     @telegram_chat_id = message.conversation.telegram_chat_id
-    token = '1028774150:AAFRDYvG9KSRDA2nakvSZbPFZIETNg7EHIg'
+    token = ENV['TELEGRAM_BOT_TOKEN']
     @api = ::Telegram::Bot::Api.new(token)
   end
 
